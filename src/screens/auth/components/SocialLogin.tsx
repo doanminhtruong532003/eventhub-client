@@ -10,11 +10,11 @@ import {
   SpaceComponent,
   TextComponent,
 } from '../../../components';
-import {appColors} from '../../../constants/appColors';
-import {fontFamilies} from '../../../constants/fontFamilies';
 import {LoadingModal} from '../../../modals';
 import {addAuth} from '../../../redux/reducers/authReducer';
 import {Settings, LoginManager, Profile} from 'react-native-fbsdk-next';
+import {appColors} from '../../../Constants/appColors.ts';
+import {fontFamilies} from '../../../Constants/fontFamilies.ts';
 
 GoogleSignin.configure({
   webClientId:

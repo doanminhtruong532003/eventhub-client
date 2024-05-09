@@ -1,8 +1,8 @@
 import React from 'react';
 import {ActivityIndicator, Image, ImageBackground} from 'react-native';
-import {appInfo} from '../constants/appInfos';
 import {SpaceComponent} from '../components';
-import {appColors} from '../constants/appColors';
+import {appInfos} from '../Constants/appInfos.ts';
+import {appColors} from '../Constants/appColors.ts';
 
 const SplashScreen = () => {
   return (
@@ -17,7 +17,7 @@ const SplashScreen = () => {
       <Image
         source={require('../assets/images/logo.png')}
         style={{
-          width: appInfo.sizes.WIDTH * 0.7,
+          width: appInfos.sizes.WIDTH * 0.7,
           resizeMode: 'contain',
         }}
       />

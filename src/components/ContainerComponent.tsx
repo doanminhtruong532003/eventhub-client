@@ -10,8 +10,8 @@ import {globalStyles} from '../styles/globalStyles';
 import {useNavigation} from '@react-navigation/native';
 import {RowComponent, TextComponent} from '.';
 import {ArrowLeft} from 'iconsax-react-native';
-import {appColors} from '../constants/appColors';
-import {fontFamilies} from '../constants/fontFamilies';
+import {appColors} from '../Constants/appColors.ts';
+import {fontFamilies} from '../Constants/fontFamilies.ts';
 
 interface Props {
   isImageBackground?: boolean;

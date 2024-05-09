@@ -9,10 +9,10 @@ import {
   TextComponent,
 } from '../../components';
 import {ArrowRight, Sms} from 'iconsax-react-native';
-import {appColors} from '../../constants/appColors';
 import {Validate} from '../../utils/validate';
 import {LoadingModal} from '../../modals';
 import authenticationAPI from '../../apis/authApi';
+import {appColors} from '../../Constants/appColors.ts';
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState('');
@@ -25,7 +25,7 @@ const ForgotPassword = () => {
   };
 
   const handleForgotPassword = async () => {
-    const api = `/forgotPassword`;
+    const api = '/forgotPassword';
     setIsLoading(true);
     try {
       const res: any = await authenticationAPI.HandleAuthentication(

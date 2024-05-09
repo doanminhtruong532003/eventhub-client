@@ -9,14 +9,14 @@ import {
   TextComponent,
 } from '../../components';
 import {ArrowRight} from 'iconsax-react-native';
-import {appColors} from '../../constants/appColors';
-import {fontFamilies} from '../../constants/fontFamilies';
 import {globalStyles} from '../../styles/globalStyles';
 import authenticationAPI from '../../apis/authApi';
 import {LoadingModal} from '../../modals';
 import {useDispatch} from 'react-redux';
 import {addAuth} from '../../redux/reducers/authReducer';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {appColors} from '../../Constants/appColors.ts';
+import {fontFamilies} from '../../Constants/fontFamilies.ts';
 
 const Verification = ({route}: any) => {
   const {code, email, password, username} = route.params;
@@ -49,7 +49,7 @@ const Verification = ({route}: any) => {
   }, [limit]);
 
   useEffect(() => {
-    let item = ``;
+    let item = '';
 
     codeValues.forEach(val => (item += val));
 
@@ -67,7 +67,7 @@ const Verification = ({route}: any) => {
     setCodeValues(['', '', '', '']);
     setNewCode('');
 
-    const api = `/verification`;
+    const api = '/verification';
     setIsLoading(true);
     try {
       const res: any = await authenticationAPI.HandleAuthentication(
@@ -94,7 +94,7 @@ const Verification = ({route}: any) => {
       } else {
         setErrorMessage('');
 
-        const api = `/register`;
+        const api = '/register';
         const data = {
           email,
           password,

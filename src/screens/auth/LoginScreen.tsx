@@ -11,12 +11,12 @@ import {
   SpaceComponent,
   TextComponent,
 } from '../../components';
-import {appColors} from '../../constants/appColors';
 import {Validate} from '../../utils/validate';
 import SocialLogin from './components/SocialLogin';
 import {useDispatch} from 'react-redux';
 import {addAuth} from '../../redux/reducers/authReducer';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { appColors } from "../../Constants/appColors.ts";
 
 const LoginScreen = ({navigation}: any) => {
   const [email, setEmail] = useState('');

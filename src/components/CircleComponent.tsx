@@ -1,6 +1,6 @@
 import {View, TouchableOpacity, StyleProp, ViewStyle} from 'react-native';
 import React, {ReactNode} from 'react';
-import {appColors} from '../constants/appColors';
+import { appColors } from "../Constants/appColors.ts";
 
 interface Props {
   size?: number;

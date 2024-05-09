@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
 import Swiper from 'react-native-swiper';
-import {appColors} from '../../constants/appColors';
-import {appInfo} from '../../constants/appInfos';
 import {globalStyles} from '../../styles/globalStyles';
 import {TextComponent} from '../../components';
-import {fontFamilies} from '../../constants/fontFamilies';
+import {appColors} from '../../Constants/appColors.ts';
+import {appInfos} from '../../Constants/appInfos.ts';
+import {fontFamilies} from '../../Constants/fontFamilies.ts';
 
-const OnbroadingScreen = ({navigation}: any) => {
+const OnboardingScreen = ({navigation}: any) => {
   const [index, setIndex] = useState(0);
 
   return (
@@ -22,8 +22,8 @@ const OnbroadingScreen = ({navigation}: any) => {
           source={require('../../assets/images/onboarding-1.png')}
           style={{
             flex: 1,
-            width: appInfo.sizes.WIDTH,
-            height: appInfo.sizes.HEIGHT,
+            width: appInfos.sizes.WIDTH,
+            height: appInfos.sizes.HEIGHT,
             resizeMode: 'cover',
           }}
         />
@@ -31,8 +31,8 @@ const OnbroadingScreen = ({navigation}: any) => {
           source={require('../../assets/images/onboarding-2.png')}
           style={{
             flex: 1,
-            width: appInfo.sizes.WIDTH,
-            height: appInfo.sizes.HEIGHT,
+            width: appInfos.sizes.WIDTH,
+            height: appInfos.sizes.HEIGHT,
             resizeMode: 'cover',
           }}
         />
@@ -40,8 +40,8 @@ const OnbroadingScreen = ({navigation}: any) => {
           source={require('../../assets/images/onboarding-2.png')}
           style={{
             flex: 1,
-            width: appInfo.sizes.WIDTH,
-            height: appInfo.sizes.HEIGHT,
+            width: appInfos.sizes.WIDTH,
+            height: appInfos.sizes.HEIGHT,
             resizeMode: 'cover',
           }}
         />
@@ -82,7 +82,7 @@ const OnbroadingScreen = ({navigation}: any) => {
   );
 };
 
-export default OnbroadingScreen;
+export default OnboardingScreen;
 StyleSheet.create({
   text: {
     color: appColors.white,

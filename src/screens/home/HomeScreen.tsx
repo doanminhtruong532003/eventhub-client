@@ -1,20 +1,13 @@
 import React from 'react';
-import {
-  Platform,
-  StatusBar,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {Platform, StatusBar, TouchableOpacity, View} from 'react-native';
 import {globalStyles} from '../../styles/globalStyles';
-import {appColors} from '../../constants/appColors';
 import {CircleComponent, RowComponent, TextComponent} from '../../components';
 import {HambergerMenu, Notification} from 'iconsax-react-native';
-import {fontFamilies} from '../../constants/fontFamilies';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import {appColors} from '../../Constants/appColors.ts';
+import {fontFamilies} from '../../Constants/fontFamilies.ts';
 
 const HomeScreen = ({navigation}: any) => {
-
-
   return (
     <View style={[globalStyles.container]}>
       <StatusBar barStyle={'light-content'} />
@@ -79,7 +72,8 @@ const HomeScreen = ({navigation}: any) => {
           {
             flex: 1,
           },
-        ]}></View>
+        ]}
+      />
     </View>
   );
 };

@@ -8,8 +8,8 @@ import {
 import React, {ReactNode} from 'react';
 import {TextComponent} from '.';
 import {globalStyles} from '../styles/globalStyles';
-import {appColors} from '../constants/appColors';
-import {fontFamilies} from '../constants/fontFamilies';
+import { appColors } from "../Constants/appColors.ts";
+import { fontFamilies } from "../Constants/fontFamilies.ts";
 
 interface Props {
   icon?: ReactNode;

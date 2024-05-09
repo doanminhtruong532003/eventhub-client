@@ -6,10 +6,10 @@ import {
   KeyboardType,
 } from 'react-native';
 import React, {ReactNode, useState} from 'react';
-import {appColors} from '../constants/appColors';
 import {globalStyles} from '../styles/globalStyles';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import { appColors } from "../Constants/appColors.ts";
 
 interface Props {
   value: string;

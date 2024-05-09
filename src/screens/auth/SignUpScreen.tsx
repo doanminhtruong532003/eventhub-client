@@ -10,11 +10,11 @@ import {
   SpaceComponent,
   TextComponent,
 } from '../../components';
-import {appColors} from '../../constants/appColors';
 import {LoadingModal} from '../../modals';
 import {Validate} from '../../utils/validate';
 import SocialLogin from './components/SocialLogin';
 import authenticationAPI from '../../apis/authApi';
+import {appColors} from '../../Constants/appColors.ts';
 const initValue = {
   username: '',
   email: '',
@@ -55,12 +55,12 @@ const SignUpScreen = ({navigation}: any) => {
 
   const formValidator = (key: string) => {
     const data = {...errorMessage};
-    let message = ``;
+    let message = '';
 
     switch (key) {
       case 'email':
         if (!values.email) {
-          message = `Email is required!!!`;
+          message = 'Email is required!!!';
         } else if (!Validate.email(values.email)) {
           message = 'Email is not invalid!!';
         } else {
@@ -70,12 +70,12 @@ const SignUpScreen = ({navigation}: any) => {
         break;
 
       case 'password':
-        message = !values.password ? `Password is required!!!` : '';
+        message = !values.password ? 'Password is required!!!' : '';
         break;
 
       case 'confirmPassword':
         if (!values.confirmPassword) {
-          message = `Please type confirm password!!`;
+          message = 'Please type confirm password!!';
         } else if (values.confirmPassword !== values.password) {
           message = 'Password is not match!!!';
         } else {
@@ -91,7 +91,7 @@ const SignUpScreen = ({navigation}: any) => {
   };
 
   const handleRegister = async () => {
-    const api = `/verification`;
+    const api = '/verification';
     setIsLoading(true);
     try {
       const res = await authenticationAPI.HandleAuthentication(
