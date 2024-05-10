@@ -8,6 +8,7 @@ import EventsScreen from './events/EventsScreen';
 import HomeScreen from './home/HomeScreen';
 import MapScreen from './maps/MapScreen';
 import ProfileScreen from './profiles/ProfileScreen';
+import SearchEvents from './events/SearchEvents';
 
 export {
   HomeScreen,
@@ -20,4 +21,5 @@ export {
   EventsScreen,
   MapScreen,
   ProfileScreen,
+  SearchEvents,
 };

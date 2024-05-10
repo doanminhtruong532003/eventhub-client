@@ -1,11 +1,22 @@
 import React from 'react';
 import {Platform, StatusBar, TouchableOpacity, View} from 'react-native';
 import {globalStyles} from '../../styles/globalStyles';
-import {CircleComponent, RowComponent, TextComponent} from '../../components';
-import {HambergerMenu, Notification} from 'iconsax-react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {appColors} from '../../Constants/appColors.ts';
 import {fontFamilies} from '../../Constants/fontFamilies.ts';
+import {
+  CircleComponent,
+  RowComponent,
+  SpaceComponent,
+  TextComponent,
+  TagComponent,
+} from '../../components';
+import {
+  HambergerMenu,
+  Notification,
+  SearchNormal1,
+  Sort,
+} from 'iconsax-react-native';
 
 const HomeScreen = ({navigation}: any) => {
   return (
@@ -65,6 +76,50 @@ const HomeScreen = ({navigation}: any) => {
               />
             </View>
           </CircleComponent>
+        </RowComponent>
+        <SpaceComponent height={20} />
+        <RowComponent>
+          <RowComponent
+            styles={{flex: 1}}
+            onPress={() =>
+              navigation.navigate('SearchEvents', {
+                isFilter: false,
+              })
+            }>
+            <SearchNormal1
+              variant="TwoTone"
+              color={appColors.white}
+              size={20}
+            />
+            <View
+              style={{
+                width: 1,
+                backgroundColor: appColors.gray2,
+                marginHorizontal: 10,
+                height: 20,
+              }}
+            />
+            <TextComponent
+              flex={1}
+              text="Search..."
+              color={appColors.gray2}
+              size={16}
+            />
+          </RowComponent>
+          <TagComponent
+            bgColor={'#5D56F3'}
+            onPress={() =>
+              navigation.navigate('SearchEvents', {
+                isFilter: true,
+              })
+            }
+            label="Filters"
+            icon={
+              <CircleComponent size={20} color="#B1AEFA">
+                <Sort size={16} color="#5D56F3" />
+              </CircleComponent>
+            }
+          />
         </RowComponent>
       </View>
       <View
