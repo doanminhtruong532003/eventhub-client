@@ -9,7 +9,7 @@ import {AddSquare, Calendar, Location, User} from 'iconsax-react-native';
 import {CircleComponent, TextComponent} from '../components';
 import {Platform} from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import { appColors } from "../Constants/appColors.ts";
+import {appColors} from '../Constants/appColors.ts';
 
 const TabNavigator = () => {
   const Tab = createBottomTabNavigator();

@@ -27,7 +27,7 @@ Settings.setAppID('978506370721025');
 const SocialLogin = () => {
   const [isLoading, setIsLoading] = useState(false);
 
-  const api = '/google-signin';
+  const api = `/google-signin`;
   const dispatch = useDispatch();
 
   const handleLoginWithGoogle = async () => {
@@ -72,7 +72,7 @@ const SocialLogin = () => {
             givenName: profile.firstName,
             familyName: profile.lastName,
             email: profile.userID,
-            photoUrl: profile.imageURL,
+            photo: profile.imageURL,
           };
 
           const res: any = await authenticationAPI.HandleAuthentication(
@@ -131,3 +131,4 @@ const SocialLogin = () => {
 };
 
 export default SocialLogin;
+
