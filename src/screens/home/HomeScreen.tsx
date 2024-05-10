@@ -1,16 +1,26 @@
 import React from 'react';
-import {Platform, StatusBar, TouchableOpacity, View} from 'react-native';
+import {
+  FlatList,
+  ScrollView,
+  Platform,
+  StatusBar,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import {globalStyles} from '../../styles/globalStyles';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {appColors} from '../../Constants/appColors.ts';
 import {fontFamilies} from '../../Constants/fontFamilies.ts';
 import {
-  CircleComponent,
-  RowComponent,
-  SpaceComponent,
-  TextComponent,
-  TagComponent,
   CategoriesList,
+  CircleComponent,
+  EventItem,
+  RowComponent,
+  SectionComponent,
+  SpaceComponent,
+  TabBarComponent,
+  TagComponent,
+  TextComponent,
 } from '../../components';
 import {
   HambergerMenu,
@@ -128,13 +138,25 @@ const HomeScreen = ({navigation}: any) => {
           <CategoriesList isFill />
         </View>
       </View>
-      <View
+      <ScrollView
+        showsVerticalScrollIndicator={false}
         style={[
           {
             flex: 1,
+            marginTop: 16,
           },
-        ]}
-      />
+        ]}>
+        <SectionComponent styles={{paddingHorizontal: 0, paddingTop: 20}}>
+          <TabBarComponent title="Upcoming Events" onPress={() => {}} />
+          <FlatList
+            horizontal
+            data={Array.from({length: 5})}
+            renderItem={({item, index}) => (
+              <EventItem key={`event${index}`} item={item} type="card" />
+            )}
+          />
+        </SectionComponent>
+      </ScrollView>
     </View>
   );
 };

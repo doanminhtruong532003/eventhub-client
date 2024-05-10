@@ -9,6 +9,9 @@ import TextComponent from './TextComponent';
 import DrawerCustom from './DrawerCustom';
 import TagComponent from './TagComponent';
 import CategoriesList from './CategoriesList';
+import CardComponent from './CardComponent';
+import EventItem from './EventItem';
+import TabBarComponent from './TabBarComponent';
 
 export {
   SpaceComponent,
@@ -22,4 +25,7 @@ export {
   DrawerCustom,
   TagComponent,
   CategoriesList,
+  TabBarComponent,
+  EventItem,
+  CardComponent,
 };
